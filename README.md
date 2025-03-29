@@ -75,9 +75,10 @@ NSLD/
 └── README.md        # This file
 ```
 
-## Demonstration Video
-Watch the full demo here:
-[Final Project Demo](E:/SNS IT/final project/NSLD/Test Video/Final project.mp4)
+## 📽️ Project Demo
+
+[![Watch the Demo](https://img.youtube.com/vi/ifynWNDr9j0/maxresdefault.jpg)](https://youtu.be/ifynWNDr9j0)
+
 
 ## Contributors
 - **Your Name** - Developer
