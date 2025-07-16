@@ -81,9 +81,8 @@ NSLD/
 
 
 ## Contributors
-- **Your Name** - Developer
-- **Other Contributors** - Additional team members
+- **Ravi** - Developer
 
 ## License
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE).
 
