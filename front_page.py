@@ -2,16 +2,17 @@ import tkinter as tk
 from tkinter import messagebox
 import subprocess
 import sys
+import os
 
 class FrontPageApp(tk.Tk):
     def __init__(self):
         super().__init__()
 
         # Window configuration for full screen
-        self.geometry(f"{self.winfo_screenwidth()}x{self.winfo_screenheight()}")  # Full screen
+        self.geometry(f"{self.winfo_screenwidth()}x{self.winfo_screenheight()}")
         self.title("Common Sign Language")
         self.configure(bg="white")
-        self.resizable(False, False)  # Disable resizing the window
+        self.resizable(False, False)
 
         # Title label at the top left
         self.title_label = tk.Label(self, text="Common Sign Language", font=("Helvetica", 20, "bold"), bg="white", anchor="w")
@@ -40,18 +41,24 @@ class FrontPageApp(tk.Tk):
         self.box4.place(x=100, y=200)
 
         # Video Call button at the bottom
-        self.video_call_button = tk.Button(self, text="Video Call", font=("Helvetica", 14), bg="blue", fg="white", command=self.open_video_call)
+        self.video_call_button = tk.Button(
+            self,
+            text="Video Call",
+            font=("Helvetica", 14),
+            bg="blue",
+            fg="white",
+            command=self.open_video_call
+        )
         self.video_call_button.place(x=self.winfo_screenwidth() // 2 - 100, y=self.winfo_screenheight() - 100)
 
     def open_video_call(self):
         """Function to open and execute Test.py"""
         try:
-            # Running Test.py (ensure that the path to Test.py is correct)
-            subprocess.run(["python", "E:\\SNS IT\\project\\NSLD\\Test.py"], check=True)
+            # Run Test.py using the current Python interpreter
+            subprocess.run([sys.executable, "Test.py"], check=True)
         except Exception as e:
             messagebox.showerror("Error", f"Failed to open video call: {e}")
-        
-        # After running Test.py, quit the application (end task)
+
         self.quit()
 
 if __name__ == "__main__":
